@@ -108,7 +108,7 @@
     </div>
     <div class="tgtRow">
       <label>Target</label>
-      <input id="target" type="number" min="1" value="2000" oninput="updateTracker()">
+      <input id="target" type="number" min="1" value="800" oninput="updateTracker()">
     </div>
   </div>
 
@@ -261,7 +261,7 @@ function renderStats(){
 /* ---------- TRACKER ---------- */
 function updateTracker(){
   const t=document.getElementById("target");
-  const target=Math.max(1, parseInt(t&&t.value)||2000);
+  const target=Math.max(1, parseInt(t&&t.value)||800);
   const current=GROUPS["Participants"].length;          // paying participants
   const pct=Math.min(100, current/target*100);
   const liquid=document.getElementById("liquid");
